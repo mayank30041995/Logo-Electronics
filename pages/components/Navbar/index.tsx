@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from '@/app/page.module.css'
+import Link from 'next/link'
 
 export default function Navbar() {
   return (
@@ -14,7 +15,7 @@ export default function Navbar() {
           priority
         />
         <div className={styles.description}>
-          <a href="/">Home</a> <a href="/products">Products</a>
+          <Link href="/">Home</Link> <Link href="/products">Products</Link>
         </div>
       </div>
     </nav>

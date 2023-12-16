@@ -14,6 +14,7 @@ import { CgArrowRightO } from 'react-icons/cg'
 
 import styles from '@/app/page.module.css'
 import { Col, Row } from 'antd'
+import Link from 'next/link'
 
 // const { Meta } = Card
 
@@ -68,7 +69,7 @@ const Cards = () => {
                 Headphone-128K
               </CardText>
               <Button color="primary" className={styles.pinkBtn}>
-                <a href="/productdetails">
+                <Link href="/productdetails">
                   <div
                     style={{
                       display: 'flex',
@@ -79,7 +80,7 @@ const Cards = () => {
                   >
                     VIEW <CgArrowRightO size="28" />
                   </div>{' '}
-                </a>
+                </Link>
               </Button>
             </CardBody>
           </Card>
