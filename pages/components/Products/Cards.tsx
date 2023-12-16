@@ -68,16 +68,18 @@ const Cards = () => {
                 Headphone-128K
               </CardText>
               <Button color="primary" className={styles.pinkBtn}>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: '24px',
-                  }}
-                >
-                  VIEW <CgArrowRightO size="28" />
-                </div>
+                <a href="/productdetails">
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      gap: '24px',
+                    }}
+                  >
+                    VIEW <CgArrowRightO size="28" />
+                  </div>{' '}
+                </a>
               </Button>
             </CardBody>
           </Card>

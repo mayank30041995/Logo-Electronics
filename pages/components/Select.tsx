@@ -12,7 +12,6 @@ const getcss = (state: any) => {
   return {
     borderColor: state.isFocused ? 'grey' : 'red',
     borderRadius: '30px',
-    marginTop: '-9px',
     width: '16em',
     color: 'fuchsia !important',
     cursor: 'pointer',

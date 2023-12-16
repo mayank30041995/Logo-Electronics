@@ -14,7 +14,7 @@ export default function Navbar() {
           priority
         />
         <div className={styles.description}>
-          <a>Home</a> <a>Products</a>
+          <a href="/">Home</a> <a href="/products">Products</a>
         </div>
       </div>
     </nav>

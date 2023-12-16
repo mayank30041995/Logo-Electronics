@@ -30,6 +30,7 @@ export default function Products(): JSX.Element {
             marginTop: '4em',
             display: 'flex',
             justifyContent: 'space-around',
+            alignItems: 'flex-end',
           }}
         >
           <Header text=">> ALL PRODUCTS" color="primary" />
