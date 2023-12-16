@@ -1,3 +1,4 @@
+'use client'
 import React, { ReactElement } from 'react'
 import styles from '../../src/app/page.module.css'
 import Image from 'next/image'
@@ -12,7 +13,7 @@ interface checklist {
   style?: object
 }
 
-const BannerHeader = ({
+const BannerHeaderImg = ({
   src,
   width,
   height,
@@ -31,13 +32,10 @@ const BannerHeader = ({
         }}
       >
         <p>VIEW ALL PRODUCTS </p>
-        <CgArrowRightO
-          size="34"
-          className={styles.iconClr}
-        />
+        <CgArrowRightO size="34" className={styles.iconClr} />
       </div>
     </Button>
   </div>
 )
 
-export default BannerHeader
+export default BannerHeaderImg

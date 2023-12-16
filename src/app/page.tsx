@@ -1,38 +1,28 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import BannerHeader from '../../pages/components/BannerHeader'
+import Header from '../../pages/components/Header'
+import Products from '../../pages/components/Products'
+import BannerHeaderImg from '../../pages/components/BannerHeaderImg'
+import Banner from '../../pages/components/Banner'
 
 export default function Home() {
   return (
     <>
-      <nav className={styles.navbar}>
-        <div className={styles.navContainer}>
-          <Image
-            src="/LOGO.png"
-            alt="LOGO"
-            className={styles.vercelLogo}
-            width={100}
-            height={34}
-            priority
+      <Banner>
+        <div>
+          <BannerHeader text="Logo Electronics" />
+          <BannerHeaderImg
+            src="/headArrow.png"
+            width={550}
+            height={15}
+            sizes="100vw"
+            style={{ top: '48%', objectFit: 'cover' }}
           />
-          <div className={styles.description}>
-            <a>Home</a> <a>Products</a>
-          </div>
         </div>
-      </nav>{' '}
-      <Image
-        src="/banner.png"
-        alt="LOGO"
-        className={styles.vercelLogo}
-        width={0}
-        height={420}
-        sizes="100vw"
-        style={{ width: '100%' }}
-        objectFit="contain"
-        priority
-      />
+      </Banner>
+      <div style={{ marginTop: '20em' }}>
+        <Header text="Products" color="secondary" />
+      </div>
+      <Products />
     </>
-   
   )
 }
-
-

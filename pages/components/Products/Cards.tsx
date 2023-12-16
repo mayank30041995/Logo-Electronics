@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from 'react'
 import {
   Card,
@@ -10,7 +11,6 @@ import {
 } from 'reactstrap'
 import { CiHeart } from 'react-icons/ci'
 import { CgArrowRightO } from 'react-icons/cg'
-
 
 import styles from '@/app/page.module.css'
 import { Col, Row } from 'antd'
@@ -76,7 +76,7 @@ const Cards = () => {
                     gap: '24px',
                   }}
                 >
-                  VIEW <CgArrowRightO size="28"  />
+                  VIEW <CgArrowRightO size="28" />
                 </div>
               </Button>
             </CardBody>

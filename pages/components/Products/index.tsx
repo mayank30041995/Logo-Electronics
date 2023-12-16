@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import styles from '@/app/page.module.css'
 import Image from 'next/image'
-import Card from './Card'
+import Cards from './Cards'
 import { Row } from 'reactstrap'
 
 interface checklist {
@@ -9,7 +9,7 @@ interface checklist {
 }
 
 const Index = ({ text }: checklist): JSX.Element => {
-  return <Card />
+  return <Cards />
 }
 
 export default Index
