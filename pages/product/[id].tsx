@@ -17,6 +17,7 @@ import Banner from '../components/Banner'
 import React from 'react'
 import { InferGetStaticPropsType } from 'next'
 import type { NextPage } from 'next'
+import Footer from '../components/Footer'
 // {
 //     description = '',
 //     discountPercentage = 0,
@@ -52,6 +53,7 @@ export default function Products({
           price={data?.price || 0}
           title={data?.title || ''}
         />
+        <Footer />
       </React.Fragment>
     </HeadTab>
   )

@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react'
 import ProductCards from './components/ProductCards'
 import styles from '../src/app/page.module.css'
 import Pagination from './components/Pagination'
+import Footer from './components/Footer'
 
 let { API_URL } = process.env
 
@@ -68,6 +69,7 @@ export default function Products({
         </Row>
         <ProductCards data={products} loading={loading} />
         <Pagination page={page} />
+        <Footer />
       </React.Fragment>
     </HeadTab>
   )
