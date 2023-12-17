@@ -7,9 +7,8 @@ import SelectOption from './components/Select'
 import Banner from './components/Banner'
 import React, { useEffect, useState } from 'react'
 import ProductCards from './components/ProductCards'
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { InferGetStaticPropsType } from 'next'
-import { useRouter } from 'next/router'
+import styles from '../src/app/page.module.css'
+import Pagination from './components/Pagination'
 
 let { API_URL } = process.env
 
@@ -27,7 +26,7 @@ export default function Products({
   const [products, setProducts] = useState<DataState[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  let skip = page ? (page - 1) * 10 : 0
+  let skip = Number(page) !== 1 ? Number(page) * 10 : 0
 
   const fetchProducts = async (search: string) => {
     setLoading(true)
@@ -37,7 +36,7 @@ export default function Products({
       if (search !== '') {
         url = url.concat(`/category/${search}`)
       } else {
-        url = url.concat(`?skip=${skip}&limit=30`)
+        url = url.concat(`?skip=${skip}&limit=10`)
       }
 
       const res = await fetch(`${url}`)
@@ -63,18 +62,12 @@ export default function Products({
         </Banner>
 
         {/* All Products */}
-        <Row
-          style={{
-            marginTop: '4em',
-            display: 'flex',
-            justifyContent: 'space-around',
-            alignItems: 'flex-end',
-          }}
-        >
+        <Row className={styles.midRow}>
           <Header text=">> ALL PRODUCTS" color="primary" />
           <SelectOption options={categories} filterBy={fetchProducts} />
         </Row>
         <ProductCards data={products} loading={loading} />
+        <Pagination page={page} />
       </React.Fragment>
     </HeadTab>
   )
