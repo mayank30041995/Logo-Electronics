@@ -23,14 +23,7 @@ const BannerHeaderImg = ({
   <div className={styles.bannerHeader} style={{ ...style }}>
     <Image src={src} width={width} height={height} alt="head" sizes={sizes} />
     <Button color="primary" className={styles.arrowBtn}>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          gap: '24px',
-        }}
-      >
+      <div className={styles.bannerHeadImg} style={{}}>
         <p>VIEW ALL PRODUCTS </p>
         <CgArrowRightO size="34" className={styles.iconClr} />
       </div>

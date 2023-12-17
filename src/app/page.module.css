@@ -70,12 +70,11 @@
 .pinkBtn {
   cursor: pointer;
   transition: box-shadow 0.3s;
-  font-size: 16px;
+  font-size: 18px;
   background: linear-gradient(93deg, #ac0eb4 4%, #e95feb 43%, #f72a9e 103%);
   width: 100%;
   height: 3em;
-  border-radius: 24px;
-  padding: 12px;
+  border-radius: 30px;
   border: none;
   font-family: var(--font-family-r);
   margin-top: 16px;
@@ -99,7 +98,84 @@
   font-family: var(--font-family-r);
   margin-top: 34px;
 }
+.imgBanner {
+  color: transparent;
+  width: 100%;
+  object-fit: cover;
+}
 
+.cardWrapper {
+  width: max-content;
+  background: #fff;
+  border-radius: 18px;
+  font-family: monospace;
+  padding: 16px;
+  margin: 32px;
+}
+.cardWrapperImg {
+  width: 16em;
+  padding: 33px;
+  height: 13em;
+}
+.cardWrapperTextTop {
+  font-family: Poppins-R;
+  color: orange;
+  text-transform: uppercase;
+}
+.cardWrapperText {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-family: Poppins-R;
+}
+.linkArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.cardSection {
+  padding: 1.5%;
+  justify-content: space-around;
+  background: lavender;
+  margin: 65px 12px;
+  border-radius: 16px;
+  border: 2px solid coral;
+}
+.cardImage {
+  color: transparent;
+  border: 2px solid coral;
+  width: 85%;
+  object-fit: cover;
+}
+.cardImageSlide {
+  color: transparent;
+  border: 2px solid coral;
+  width: 85%;
+  object-fit: cover;
+  background: lavender;
+}
+.cardHeading {
+  margin-top: 12px;
+  font-size: 18px;
+  text-align: start;
+  font-family: Poppins-R;
+}
+.cardTextDesc {
+  margin-top: 12px;
+  font-size: 18px;
+  text-align: start;
+  font-weight: 500;
+  font-family: Poppins-R;
+}
+
+.bannerHeadImg {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 24px;
+}
 .description {
   display: flex;
   justify-content: center;

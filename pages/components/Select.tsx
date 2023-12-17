@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useId } from 'react'
 import Select from 'react-select'
 import styles from '@/app/page.module.css'
 import { CSSObject } from 'styled-components'
@@ -17,9 +17,10 @@ const getcss = (state: any) => {
     cursor: 'pointer',
   }
 }
- const SelectOption = () => {
+const SelectOption = () => {
   return (
     <Select
+      instanceId={useId()}
       styles={{
         control: (baseStyles: object, state: object) => ({
           ...baseStyles,

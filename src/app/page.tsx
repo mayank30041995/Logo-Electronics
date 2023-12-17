@@ -1,10 +1,39 @@
+'use client'
 import BannerHeader from '../../pages/components/BannerHeader'
 import Header from '../../pages/components/Header'
-import Products from '../../pages/components/Products'
+import ProductCards from '../../pages/components/ProductCards'
 import BannerHeaderImg from '../../pages/components/BannerHeaderImg'
 import Banner from '../../pages/components/Banner'
+import { GetStaticProps } from 'next'
+import { InferGetStaticPropsType } from 'next'
+import { useEffect, useState } from 'react'
 
-export default function Home() {
+type DataState = {
+  data: object
+}
+export default function Home(): JSX.Element {
+  const [products, setProducts] = useState<DataState[]>([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+
+  const fetchProducts = async () => {
+    setLoading(true)
+    try {
+      const res = await fetch('https://dummyjson.com/products?skip=0&limit=30')
+      const data = await res.json()
+      setLoading(false)
+      setProducts(data)
+    } catch (err: any) {
+      setLoading(false)
+      setProducts([])
+      setError(err.message)
+    }
+  }
+
+  useEffect(() => {
+    fetchProducts()
+  }, [])
+
   return (
     <>
       <Banner>
@@ -22,7 +51,7 @@ export default function Home() {
       <div style={{ marginTop: '20em' }}>
         <Header text="Products" color="secondary" />
       </div>
-      <Products />
+      <ProductCards data={products} loading={loading} />
     </>
   )
 }

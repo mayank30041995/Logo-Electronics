@@ -1,22 +1,18 @@
-import Image from 'next/image'
-import styles from '../src/app/page.module.css'
 import '@/app/globals.css'
 import HeadTab from './components/HeadTab'
-import Navbar from './components/Navbar'
-import BannerHeaderImg from './components/BannerHeaderImg'
 import BannerHeader from './components/BannerHeader'
 import Header from './components/Header'
-import ProductItems from './components/Products'
-import ProductDetails from './components/ProductDetails'
-import { Button } from 'reactstrap'
-import { CgArrowRightO } from 'react-icons/cg'
-import Paper from './components/Paper'
 import { Row } from 'antd'
 import SelectOption from './components/Select'
 import Banner from './components/Banner'
 import React from 'react'
+import ProductCards from './components/ProductCards'
+import { GetStaticProps } from 'next'
+import { InferGetStaticPropsType } from 'next'
 
-export default function Products(): JSX.Element {
+export default function Products({
+  products,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (
     <HeadTab>
       <React.Fragment>
@@ -36,8 +32,19 @@ export default function Products(): JSX.Element {
           <Header text=">> ALL PRODUCTS" color="primary" />
           <SelectOption />
         </Row>
-        <ProductItems />
+        <ProductCards data={products} />
       </React.Fragment>
     </HeadTab>
   )
+}
+
+export const getStaticProps = async () => {
+  const res = await fetch('https://dummyjson.com/products?skip=0&limit=30')
+  const products = await res.json()
+
+  return {
+    props: {
+      products,
+    },
+  }
 }
