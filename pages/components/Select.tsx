@@ -3,11 +3,6 @@ import Select from 'react-select'
 import styles from '@/app/page.module.css'
 import { CSSObject } from 'styled-components'
 
-const options = [
-  { value: '1', label: 'All Products' },
-  { value: '2', label: 'phone' },
-  { value: '3', label: 'other' },
-]
 const getcss = (state: any) => {
   return {
     borderColor: state.isFocused ? 'grey' : 'red',
@@ -17,7 +12,16 @@ const getcss = (state: any) => {
     cursor: 'pointer',
   }
 }
-const SelectOption = () => {
+const SelectOption = ({
+  options,
+  filterBy,
+}: {
+  options: string[]
+  filterBy: any
+}) => {
+  const optionsArray =
+    options && options.map((option, i) => ({ value: i, label: option }))
+
   return (
     <Select
       instanceId={useId()}
@@ -27,7 +31,8 @@ const SelectOption = () => {
           ...getcss(state),
         }),
       }}
-      options={options}
+      onChange={(e) => filterBy(e?.label)}
+      options={optionsArray}
     />
   )
 }

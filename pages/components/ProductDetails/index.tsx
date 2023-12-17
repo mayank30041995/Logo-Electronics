@@ -29,6 +29,7 @@ const Index = ({
             {images && (
               <Image
                 loader={() => images[0]}
+                unoptimized={true}
                 src={`${images[0]}`}
                 alt="/headphone.png"
                 className={styles.cardImage}
@@ -58,6 +59,7 @@ const Index = ({
             <Col key={key}>
               <Image
                 loader={() => image}
+                unoptimized={true}
                 src={image}
                 alt="/headphone.png"
                 className={styles.cardImage}

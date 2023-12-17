@@ -34,7 +34,8 @@ const Cards = ({ loading, data }: datalist) => {
           Loading...
         </Spinner>
       )}
-      {data?.products &&
+      {!loading &&
+        data?.products &&
         data?.products.length > 0 &&
         data?.products.map((e: any, i: number) => (
           <Col key={i} className="bg-light border">

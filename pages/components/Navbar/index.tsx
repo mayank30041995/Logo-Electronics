@@ -15,7 +15,15 @@ export default function Navbar() {
           priority
         />
         <div className={styles.description}>
-          <Link href="/">Home</Link> <Link href="/products">Products</Link>
+          <Link href="/" className={styles.cardTextDesc}>
+            Home
+          </Link>
+          <Link
+            className={styles.cardTextDesc}
+            href={{ pathname: '/products', query: { page: 1 } }}
+          >
+            Products
+          </Link>
         </div>
       </div>
     </nav>
