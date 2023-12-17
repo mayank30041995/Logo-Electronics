@@ -7,6 +7,11 @@ import Banner from '../../pages/components/Banner'
 import { GetStaticProps } from 'next'
 import { InferGetStaticPropsType } from 'next'
 import { useEffect, useState } from 'react'
+import styles from './page.module.css'
+import Image from 'next/image'
+import { Col, Row } from 'antd'
+import { CardText, CardTitle } from 'reactstrap'
+import Footer from '../../pages/components/Footer'
 
 type DataState = {
   data: object
@@ -19,7 +24,7 @@ export default function Home(): JSX.Element {
   const fetchProducts = async () => {
     setLoading(true)
     try {
-      const res = await fetch('https://dummyjson.com/products?skip=0&limit=30')
+      const res = await fetch('https://dummyjson.com/products?skip=0&limit=15')
       const data = await res.json()
       setLoading(false)
       setProducts(data)
@@ -52,6 +57,7 @@ export default function Home(): JSX.Element {
         <Header text="Products" color="secondary" />
       </div>
       <ProductCards data={products} loading={loading} />
+      <Footer />
     </>
   )
 }

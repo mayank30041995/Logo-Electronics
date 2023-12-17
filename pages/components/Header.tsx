@@ -4,9 +4,10 @@ import styles from '../../src/app/page.module.css'
 interface checklist {
   text: string
   color: string
+  style?: object
 }
 
-const Header = ({ text, color }: checklist): JSX.Element => {
+const Header = ({ text, color, style }: checklist): JSX.Element => {
   const colorStl = color === 'primary' ? '#FFFFFF' : '#F903AA'
   const fntSize = color === 'primary' ? '24px' : '38px'
   const fntWt = color === 'primary' ? 200 : 500
@@ -19,6 +20,7 @@ const Header = ({ text, color }: checklist): JSX.Element => {
           fontSize: fntSize,
           width: 'max-content',
           fontWeight: fntWt,
+          ...style,
         }}
       >
         {text}

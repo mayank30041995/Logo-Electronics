@@ -75,20 +75,19 @@ export const getStaticProps = async (context: any) => {
 }
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`https://dummyjson.com/products/`)
-  const data = await res.json()
+  try {
+    const res = await fetch(`https://dummyjson.com/products/`)
+    const data = await res.json()
 
-  const paths = data.products?.map((item: any) => ({
-    params: { id: item.id.toString() },
-  }))
+    const paths = data.products?.map((item: any) => ({
+      params: { id: item.id.toString() },
+    }))
 
-  return {
-    paths,
-    fallback: true,
+    return {
+      paths,
+      fallback: true,
+    }
+  } catch (err) {
+    console.log(err)
   }
-  //to only show two paths:
-  /* return {
-    paths: [{ params: { id: "1" } }, { params: { id: "2" } }],
-    fallback: false,
-  }; */
 }

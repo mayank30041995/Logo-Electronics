@@ -85,7 +85,4 @@ export async function getServerSideProps({ query }: { query: any }) {
   } catch (err) {
     console.log(err)
   }
-  /* 
-    Pass the name param to the page
-  */
 }
