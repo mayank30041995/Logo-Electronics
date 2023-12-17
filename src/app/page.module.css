@@ -143,10 +143,15 @@
   border-radius: 16px;
   border: 2px solid coral;
 }
+.cardCnt {
+  width: 35em;
+  margin: 10px;
+}
 .cardImage {
   color: transparent;
   border: 2px solid coral;
-  width: 85%;
+  width: 15em;
+  margin: 12px;
   object-fit: cover;
 }
 .cardImageSlide {
@@ -160,14 +165,14 @@
   margin-top: 12px;
   font-size: 18px;
   text-align: start;
-  font-family: Poppins-R;
+  font-family: Poppins-M;
 }
 .cardTextDesc {
   margin-top: 12px;
   font-size: 18px;
   text-align: start;
   font-weight: 500;
-  font-family: Poppins-R;
+  font-family: Poppins-M;
 }
 
 .bannerHeadImg {

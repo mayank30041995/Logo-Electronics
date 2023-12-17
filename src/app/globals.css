@@ -13,6 +13,11 @@
     url('/fonts/Poppins-Regular.ttf') format('truetype');
 }
 @font-face {
+  font-family: 'Poppins-M';
+  src: local('Poppins-Medium'),
+    url('/fonts/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
   font-family: 'Routhem-R';
   src: local('Routhem-Regular'), url('/fonts/Routhem.woff2') format('truetype');
 }

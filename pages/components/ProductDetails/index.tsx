@@ -39,14 +39,14 @@ const Index = ({
               />
             )}
           </Col>
-          <Col style={{ width: '35em' }}>
+          <Col className={styles.cardCnt}>
             <CardHeader className={styles.cardHeading}>{title}</CardHeader>
             <CardText>{description}</CardText>
             <CardHeader className={styles.cardTextDesc}>
-              Price: {price}
+              Price: Rs {price}
             </CardHeader>
             <CardHeader className={styles.cardTextDesc}>
-              Discount: {discountPercentage}
+              Discount: {discountPercentage}%
             </CardHeader>
           </Col>
         </Row>
@@ -62,7 +62,7 @@ const Index = ({
                 alt="/headphone.png"
                 className={styles.cardImage}
                 width={50}
-                height={200}
+                height={220}
                 sizes="100vw"
                 priority
               />
