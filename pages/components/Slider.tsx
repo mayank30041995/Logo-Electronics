@@ -3,7 +3,7 @@ import Carousel from 'react-grid-carousel'
 
 const Slider = ({ data }): JSX.Element => {
   return (
-    <div style={{ marginTop: '-6em', marginLeft: '25%' }}>
+    <div style={{ marginTop: '-6em', marginLeft: '26%' }}>
       <Carousel cols={4} rows={1} gap={10} loop style={{ height: '12em' }}>
         {data?.products &&
           data?.products.length > 0 &&
