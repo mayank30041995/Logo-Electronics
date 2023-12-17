@@ -27,7 +27,7 @@ const Pagination = ({ page = 1 }: checklist): JSX.Element => (
       onClick={async () => {
         await Router.push({
           pathname: '/products',
-          query: { page: Number(page) + 1 },
+          query: { page: page !== 0 ? Number(page) + 1 : 2 },
         })
         location.reload()
       }}

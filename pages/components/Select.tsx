@@ -7,7 +7,7 @@ const getcss = (state: any) => {
   return {
     borderColor: state.isFocused ? 'grey' : 'red',
     borderRadius: '30px',
-    width: '16em',
+    width: '18em',
     color: 'fuchsia !important',
     cursor: 'pointer',
   }
@@ -24,6 +24,7 @@ const SelectOption = ({
 
   return (
     <Select
+      placeholder="Select Category"
       instanceId={useId()}
       styles={{
         control: (baseStyles: object, state: object) => ({

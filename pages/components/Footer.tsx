@@ -34,7 +34,7 @@ const Footer = (): JSX.Element => (
       </Col>
       <Col className={styles.footerColB}>
         <Header
-          text="Useful Links"
+          text="USEFUL LINKS"
           color="secondary"
           style={{
             fontSize: '18px',
@@ -67,6 +67,9 @@ const Footer = (): JSX.Element => (
         />
       </Col>
     </Row>
+    <CardText className={styles.footerColText}>
+      COPYRIGHT 2023 lOGO ALL RIGHT RESERVED
+    </CardText>
   </div>
 )
 

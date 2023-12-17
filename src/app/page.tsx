@@ -12,6 +12,7 @@ import Image from 'next/image'
 import { Col, Row } from 'antd'
 import { CardText, CardTitle } from 'reactstrap'
 import Footer from '../../pages/components/Footer'
+import Slider from '../../pages/components/Slider'
 
 type DataState = {
   data: object
@@ -53,6 +54,7 @@ export default function Home(): JSX.Element {
           />
         </div>
       </Banner>
+      <Slider data={products} />
       <div style={{ marginTop: '20em' }}>
         <Header text="Products" color="secondary" />
       </div>
