@@ -28,8 +28,8 @@ const Footer = (): JSX.Element => (
         />
         <CardText className={styles.footerColText}>
           lOGO is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when
+          Lorem Ipsum has been the industry&apos;s standard dummy text ever
+          since the 1500s, when
         </CardText>
       </Col>
       <Col className={styles.footerColB}>
