@@ -26,7 +26,7 @@ export default function Products({
   const [products, setProducts] = useState<DataState[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  let skip = Number(page) !== 1 ? Number(page) * 10 : 0
+  let skip = Number(page) !== 1 ? Number(page - 1) * 10 : 0
 
   const fetchProducts = async (search: string) => {
     setLoading(true)
