@@ -264,6 +264,13 @@
   justify-content: space-around;
   transform: translate(-50%, -50%);
 }
+.slideCard {
+  background: rgb(230, 230, 250);
+  padding: 12px;
+  height: 16em;
+  width: 12em;
+  border: 3px solid orange;
+}
 
 .description a {
   display: flex;

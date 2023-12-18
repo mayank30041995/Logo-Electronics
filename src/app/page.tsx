@@ -55,7 +55,7 @@ export default function Home(): JSX.Element {
         </div>
       </Banner>
       <Slider data={products} />
-      <div style={{ marginTop: '20em' }}>
+      <div style={{ marginTop: '10em' }}>
         <Header text="Products" color="secondary" />
       </div>
       <ProductCards data={products} loading={loading} />
