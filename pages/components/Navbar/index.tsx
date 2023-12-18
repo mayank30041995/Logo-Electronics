@@ -16,7 +16,7 @@ export default function Navbar() {
         />
         <div className={styles.description}>
           <Link href="/" className={styles.cardTextDesc}>
-            Home
+            <p className={styles.navTopLink}>Home</p>
           </Link>
           <Link
             className={styles.cardTextDesc}
