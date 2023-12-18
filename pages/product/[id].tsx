@@ -16,20 +16,12 @@ import SelectOption from '../components/Select'
 import Banner from '../components/Banner'
 import React from 'react'
 import { InferGetStaticPropsType } from 'next'
-import type { NextPage } from 'next'
 import Footer from '../components/Footer'
-// {
-//     description = '',
-//     discountPercentage = 0,
-//     category = '',
-//     images = [],
-//     price = 0,
-//     title = '',
-//   },
+
 export default function Products({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
-  // let { title }: { title: string } = data
+  let { category }: { category: string } = data || {}
   return (
     <HeadTab>
       <React.Fragment>
@@ -39,20 +31,20 @@ export default function Products({
             <Paper text="Product Details" />
           </div>
         </Banner>
-
         {/* Product Details  */}
         <div style={{ marginTop: '4em' }}>
-          <Header text={data?.title || ''} color="primary" />
+          <Header text={category || ''} color="primary" />
         </div>
-
-        <ProductDetails
-          description={data?.description || ''}
-          discountPercentage={data?.discountPercentage || 0}
-          category={data?.category}
-          images={data?.images || ''}
-          price={data?.price || 0}
-          title={data?.title || ''}
-        />
+        {data && (
+          <ProductDetails
+            description={data.description || ''}
+            discountPercentage={data.discountPercentage || 0}
+            category={data.category}
+            images={data.images || ''}
+            price={data.price || 0}
+            title={data.title || ''}
+          />
+        )}
         <Footer />
       </React.Fragment>
     </HeadTab>

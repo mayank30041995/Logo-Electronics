@@ -4,19 +4,16 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  CardLink,
   CardSubtitle,
   Button,
   Spinner,
 } from 'reactstrap'
 import { CiHeart } from 'react-icons/ci'
 import { CgArrowRightO } from 'react-icons/cg'
-
 import styles from '@/app/page.module.css'
 import { Col, Row } from 'antd'
 import Link from 'next/link'
 
-// const { Meta } = Card
 interface datalist {
   loading?: boolean
   data?: any
@@ -34,9 +31,10 @@ const Cards = ({ loading, data }: datalist) => {
         </Spinner>
       )}
       {!loading &&
-        data?.products &&
-        data?.products.length > 0 &&
-        data?.products.map((e: any, i: number) => (
+        data &&
+        data.products &&
+        data.products.length > 0 &&
+        data.products.map((e: any, i: number) => (
           <Col key={i} className="bg-light border">
             <Card color="light" className={styles.cardWrapper}>
               <CardBody>
