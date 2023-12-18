@@ -190,6 +190,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  letter-spacing: 1px;
+  font-size: 14px;
   gap: 24px;
 }
 .midRow {
@@ -199,7 +201,7 @@
   align-items: flex-end;
 }
 .navTopLink {
-  width: 5em;
+  width: 6em;
   border-radius: 20px;
   padding: 1px;
   border: 2px solid #f903aa;

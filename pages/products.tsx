@@ -14,7 +14,7 @@ import Footer from './components/Footer'
 let { API_URL } = process.env
 
 type DataState = {
-  data: object
+  data: object[]
 }
 
 export default function Products({
